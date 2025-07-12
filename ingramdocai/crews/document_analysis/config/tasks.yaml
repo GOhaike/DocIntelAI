@@ -1,0 +1,35 @@
+document_analysis_task:
+  description: >
+    Your task is to generate a high-value, structured analysis of one or more uploaded documents.
+
+    You will receive an input document to analyze: {documents}
+
+    These documents may include contracts, policies, briefs, financial statements, or scanned records. 
+    Your job is to read through them and synthesize their meaning, structure, and interconnections.
+
+    You must deliver:
+      - A classification of the document type (e.g., contract, policy, financial, operational)
+      - A list of extracted key entities (e.g., organizations, people, terms, obligations, dates)
+      - Any clauses, risks, compliance elements, or key assertions that matter
+      - A mapping of how the documents relate to each other — shared subjects, conflicting statements, dependent references
+
+    Your analysis is not just a summary. It must help someone understand:
+      - What this document is and why it exists
+      - What its critical elements are
+      - What relationships or risks it carries relative to other documents in scope
+
+    If any file names or references appear, include them only when they clarify meaning or traceability.
+
+  expected_output: >
+    Your output must include the following:
+
+    - classification: the inferred document type or purpose (e.g., Contract, Privacy Policy, Operating Plan)
+    - key_entities: a list of extracted people, organizations, dates, terms, etc.
+    - critical_clauses: a bullet list or short paragraphs explaining the most important clauses, requirements, or risks
+    - cross_doc_relationships: any patterns, conflicts, or dependencies found between the documents
+    - summary: a concise (2–3 paragraph) high-level narrative to describe what these documents collectively reveal or imply
+
+    This analysis will power compliance systems, executive dashboards, and agentic workflows.
+    It must be concise, structured, and deeply grounded in document evidence.
+
+  agent: document_analysis_agent

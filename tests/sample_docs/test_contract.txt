@@ -1,0 +1,1 @@
+This is a fallback sample contract for testing Weaviate injection.
