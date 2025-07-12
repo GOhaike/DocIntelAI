@@ -159,7 +159,18 @@ inputs = {
 
 ## Flow Diagram
 
-The system is orchestrated as follows:
+The high-level orchestration of IngramDocAI is coordinated by CrewAI. You can view the interactive flow diagram here:
+
+[View CrewAI Flow Diagram](crewai_flow.html)
+
+The flow is composed of:
+- **Receive Input**: Gathers session details and task type
+- **Orchestrator**: Routes to one of the following:
+  - InjectDocumentRouter
+  - StatusCheckRouter
+  - AnalyzeDocumentRouter
+  - QueryRouter
+
 
 
 
